@@ -7,6 +7,8 @@ function ItemRepo({repo, handleRemoveRepo}) {
   const handleRemove = () => {
     handleRemoveRepo(repo.id)
   }
+ 
+
 
   return (
     <ItemContainer onClick={handleRemove}>
@@ -15,6 +17,7 @@ function ItemRepo({repo, handleRemoveRepo}) {
         <a href={repo.html_url} rel="noreferrer" target="_blank">Ver repositório</a><br />
         <a href="#"  rel="noreferrer" className="remover">Remover</a>
         <hr />
+        
     </ItemContainer>
   )
 }

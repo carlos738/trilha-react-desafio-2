@@ -32,7 +32,7 @@ function App() {
     alert('Repositório não encontrado')
 
   }
-
+  /*
   const handleRemoveRepo = (id) => {
    // console.log('Removendo registro', id);
     const isDelete = repos.filter(repo=>repo.id !==id)
@@ -40,8 +40,12 @@ function App() {
     console.log("O repositório foi removido com sucesso! ")
     // utilizar filter.
   }
-
-
+   */ 
+  const handleRemoveRepo_ = (id) =>{
+    setRepos(prev => prev.filter(repos => repos.id !== id && repos.isDeleted));
+    console.log("Removendo ")
+  };
+  
   return (
     <Container>
       <img src={gitLogo} width={72} height={72} alt="github logo"/>
