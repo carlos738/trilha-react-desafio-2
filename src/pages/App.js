@@ -43,7 +43,7 @@ function App() {
    */ 
   const handleRemoveRepo_ = (id) =>{
     setRepos(prev => prev.filter(repos => repos.id !== id && repos.isDeleted));
-    console.log("Removendo ")
+    console.log("O repositório foi removido com sucesso!!!")
   };
   
   return (
