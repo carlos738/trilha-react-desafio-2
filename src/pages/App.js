@@ -25,7 +25,7 @@ function App() {
       if(!isExist){
         setRepos(prev => [...prev, data]);
         setCurrentRepo('')
-        return
+        return 
       }
 
     }
@@ -34,8 +34,10 @@ function App() {
   }
 
   const handleRemoveRepo = (id) => {
-    console.log('Removendo registro', id);
-
+   // console.log('Removendo registro', id);
+    const isDelete = repos.filter(repo=>repo.id !==id)
+    setRepos(isDelete)
+    console.log("O repositório foi removido com sucesso! ")
     // utilizar filter.
   }
 
